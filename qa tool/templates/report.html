@@ -1,0 +1,21 @@
+<!-- templates/report.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QA Report</title>
+</head>
+<body>
+    <h2>QA Issues Found:</h2>
+    {% if issues %}
+        <ul>
+            {% for issue in issues %}
+                <li>{{ issue }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No issues found. Looks good!</p>
+    {% endif %}
+    <br>
+    <a href="/">Check Another</a>
+</body>
+</html>
